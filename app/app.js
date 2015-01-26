@@ -6,10 +6,10 @@
     var template = document.querySelector('#t');
 
     template.pages = [
-        {name: 'Expenses', hash: 'one', icon: 'list' },
-        {name: 'Categories', hash: 'two', icon: 'grade' },
-        {name: 'Search', hash: 'three', icon: 'search' },
-        {name: 'Stats', hash: 'four', icon: 'assessment' }
+        {name: 'Expenses', hash: 'one', icon: 'list', url: 'pages/expenses.html' },
+        {name: 'Categories', hash: 'two', icon: 'grade', url: 'pages/expenses.html' },
+        {name: 'Search', hash: 'three', icon: 'search', url: 'pages/expenses.html' },
+        {name: 'Stats', hash: 'four', icon: 'assessment', url: 'pages/expenses.html' }
     ];
 
     template.addEventListener('template-bound', function(e) {
@@ -65,6 +65,14 @@
         if (detail.isSelected) {
             document.querySelector('#scaffold').closeDrawer();
         }
+    };
+
+    template.onResponse = function(e, detail, sender) {
+        var article = detail.response.querySelector('article');
+
+        var pages = document.querySelector('#pages');
+        this.injectBoundHTML(article.innerHTML,
+            pages.selectedItem.firstElementChild);
     };
 
 })();
