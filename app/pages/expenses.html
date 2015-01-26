@@ -1,5 +1,23 @@
 <article>
-    <paper-input-decorator label="required" floatingLabel error="input is required!" autoValidate>
+    <paper-input-decorator label="Date" floatingLabel error="input is required!" autoValidate>
         <input is="core-input" required>
     </paper-input-decorator>
+
+    <paper-input-decorator label="Amount" floatingLabel error="input is required!" autoValidate>
+        <input is="core-input" required>
+    </paper-input-decorator>
+
+    <paper-input-decorator label="Note" floatingLabel error="input is required!" autoValidate>
+        <input is="core-input" required>
+    </paper-input-decorator>
+
+    <!--
+    <input id="trigger" value="{{selectedDate}}"
+           on-click="{{$.datePicker.toggle}}"
+           readonly class="date"/>
+    <polymer-date-picker
+            id="datePicker"
+            selectedDate="{{selectedDate}}"
+            relatedTarget="{{$.trigger}}"
+            opened="false"/>-->
 </article>

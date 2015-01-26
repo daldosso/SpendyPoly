@@ -22,7 +22,8 @@
     "core-pages": "Polymer/core-pages#~0.5.4",
     "core-animated-pages": "Polymer/core-animated-pages#~0.5.4",
     "core-ajax": "Polymer/core-ajax#~0.5.4",
-    "paper-input": "Polymer/paper-input#~0.5.4"
+    "paper-input": "Polymer/paper-input#~0.5.4",
+    "polymer-date-picker": "~0.0.11"
   },
   "devDependencies": {
     "polymer-test-tools": "Polymer/polymer-test-tools#^0.5.1"

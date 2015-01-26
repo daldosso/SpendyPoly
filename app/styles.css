@@ -46,3 +46,7 @@ core-menu > paper-item.core-selected {
         height: 100%;
     }
 }
+
+.inner-page {
+    font-size: 20px;
+}
