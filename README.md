@@ -3,6 +3,6 @@ Polymer Project Spendy version
 
 npm install
 
-bower app/install
+app/bower install
 
 grunt serve
