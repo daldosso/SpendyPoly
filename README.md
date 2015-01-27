@@ -1,5 +1,5 @@
 # SpendyPoly
-Polymer Project Spendy version
+Spendy Project Polymer version
 
 npm install
 
