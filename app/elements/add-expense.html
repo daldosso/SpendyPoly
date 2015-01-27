@@ -1,22 +1,30 @@
 <polymer-element name="add-expense">
-    <template>
+    <style>
+        html /deep/ paper-action-dialog {
+            width: 600px;
+        }
+        html /deep/ paper-dialog paper-button {
+            font-weight: bold;
+        }
+        html /deep/ paper-button[autofocus] {
+            color: #4285f4;
+        }
 
-        <style>
-            .dialog {
-                width: 600px;
-            }
-        </style>
+    </style>
+
+    <template>
         <core-icon-button icon="add" on-click="{{addExpense}}"></core-icon-button>
 
         <paper-action-dialog heading="Add expense" id="dialog">
             <p>
-                <paper-input-decorator label="Date" floatingLabel error="input is required!" autoValidate>
+                <paper-input-decorator label="Date" floatingLabel error="input is required!" autoValidate style="width: 200px">
                     <input is="core-input" required>
                 </paper-input-decorator>
 
-                <paper-input-decorator label="Amount" floatingLabel error="input is required!" autoValidate>
+                <paper-input-decorator label="Amount" floatingLabel error="input is required!" autoValidate style="width: 200px">
                     <input is="core-input" required>
                 </paper-input-decorator>
+                &euro;
 
                 <paper-input-decorator label="Note" floatingLabel error="input is required!" autoValidate>
                     <input is="core-input" required>
