@@ -6,14 +6,14 @@
     var template = document.querySelector('#t');
 
     template.pages = [
-        {name: 'Expenses', hash: 'one', icon: 'list', url: 'pages/expenses.html' },
-        {name: 'Categories', hash: 'two', icon: 'grade', url: 'pages/expenses.html' },
-        {name: 'Search', hash: 'three', icon: 'search', url: 'pages/expenses.html' },
-        {name: 'Stats', hash: 'four', icon: 'assessment', url: 'pages/expenses.html' }
+        {name: 'Expenses', hash: '', icon: 'list', url: 'pages/expenses.html' },
+        {name: 'Categories', hash: '', icon: 'grade', url: 'pages/categories.html' },
+        {name: 'Search', hash: '', icon: 'search', url: 'pages/search.html' },
+        {name: 'Stats', hash: '', icon: 'assessment', url: 'pages/stats.html' }
     ];
 
     template.addEventListener('template-bound', function(e) {
-        var keys = document.querySelector('#keys');
+        /*var keys = document.querySelector('#keys');
 
         // Allow selecting pages by num keypad. Dynamically add
         // [1, template.pages.length] to key mappings.
@@ -24,11 +24,11 @@
         });
         keys.keys += ' ' + keysToAdd;
 
-        this.route = this.route || DEFAULT_ROUTE; // Select initial route.
+        this.route = this.route || DEFAULT_ROUTE; // Select initial route.*/
     });
 
     template.keyHandler = function(e, detail, sender) {
-        var pages = document.querySelector('#pages');
+        /*var pages = document.querySelector('#pages');
 
         // Select page by num key.
         var num = parseInt(detail.key);
@@ -49,7 +49,7 @@
             case 'space':
                 detail.shift ? pages.selectPrevious() : pages.selectNext();
                 break;
-        }
+        }*/
     };
 
     template.cyclePages = function(e, detail, sender) {
@@ -69,10 +69,8 @@
 
     template.onResponse = function(e, detail, sender) {
         var article = detail.response.querySelector('article');
-
         var pages = document.querySelector('#pages');
-        this.injectBoundHTML(article.innerHTML,
-            pages.selectedItem.firstElementChild);
+        this.injectBoundHTML(article.innerHTML, pages.selectedItem.firstElementChild);
     };
 
 })();
