@@ -1,13 +1,6 @@
 <polymer-element name="list-expenses" layout vertical>
     <template>
-        <div layout horizontal wrap class="spaced">
-            <template repeat="{{multi ? selection: [selection]}}">
-                <div class="selection-display">Id {{id}}: {{checked}} {{value}} {{['a','b','c'][type]}}</div>
-            </template>
-        </div>
-
         <core-ajax auto url="http://www.adaldosso.com/quantospendi/srv/login.php?username=demo&password=demo" handleAs="json" on-core-response="{{loginCallback}}"></core-ajax>
-
         <core-ajax id="listExpenses" url="http://www.adaldosso.com/quantospendi/srv/spese-dettagli-demo.php" handleAs="json" response="{{response}}"></core-ajax>
 
         <core-list data="{{expensesData}}" style="width:800px; height:600px" id="list">
@@ -20,7 +13,6 @@
         Polymer({
             responseChanged: function() {
                 this.expensesData = this.response.rows;
-                console.log(this.expensesData);
             },
             loginCallback: function() {
                 this.$.listExpenses.go();
