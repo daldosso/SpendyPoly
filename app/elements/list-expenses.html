@@ -6,20 +6,24 @@
             </template>
         </div>
 
-        <core-list data="{{testData}}" style="width:300px; height:200px" id="list">
+        <core-ajax auto url="http://www.adaldosso.com/quantospendi/srv/login.php?username=demo&password=demo" handleAs="json" on-core-response="{{loginCallback}}"></core-ajax>
+
+        <core-ajax id="listExpenses" url="http://www.adaldosso.com/quantospendi/srv/spese-dettagli-demo.php" handleAs="json" response="{{response}}"></core-ajax>
+
+        <core-list data="{{expensesData}}" style="width:800px; height:600px" id="list">
             <template>
-                <div>List row</div>
+                <div>Spesa: {{model.dataSpesaFormatted}} - {{index}}</div>
             </template>
         </core-list>
     </template>
     <script>
         Polymer({
-            testData: [{name: "1"}, {name: "2"}, {name: "3"}, {name: "4"}],
-            ready: function() {
-                var data = [];
-                data.push({'index': 0});
-                data.push({'index': 1});
-                //document.querySelector('#list').data = data;
+            responseChanged: function() {
+                this.expensesData = this.response.rows;
+                console.log(this.expensesData);
+            },
+            loginCallback: function() {
+                this.$.listExpenses.go();
             }
         });
     </script>
