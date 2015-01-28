@@ -1,0 +1,26 @@
+<polymer-element name="list-expenses" layout vertical>
+    <template>
+        <div layout horizontal wrap class="spaced">
+            <template repeat="{{multi ? selection: [selection]}}">
+                <div class="selection-display">Id {{id}}: {{checked}} {{value}} {{['a','b','c'][type]}}</div>
+            </template>
+        </div>
+
+        <core-list data="{{testData}}" style="width:300px; height:200px" id="list">
+            <template>
+                <div>List row</div>
+            </template>
+        </core-list>
+    </template>
+    <script>
+        Polymer({
+            testData: [{name: "1"}, {name: "2"}, {name: "3"}, {name: "4"}],
+            ready: function() {
+                var data = [];
+                data.push({'index': 0});
+                data.push({'index': 1});
+                //document.querySelector('#list').data = data;
+            }
+        });
+    </script>
+</polymer-element>
