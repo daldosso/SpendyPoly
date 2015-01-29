@@ -9,7 +9,8 @@
         {name: 'Expenses', hash: '', icon: 'list', url: 'pages/expenses.html' },
         {name: 'Categories', hash: '', icon: 'grade', url: 'pages/categories.html' },
         {name: 'Search', hash: '', icon: 'search', url: 'pages/search.html' },
-        {name: 'Stats', hash: '', icon: 'assessment', url: 'pages/stats.html' }
+        {name: 'Stats', hash: '', icon: 'assessment', url: 'pages/stats.html' },
+        {name: 'Calc', hash: '', icon: 'apps', url: 'pages/calculator.html' }
     ];
 
     template.addEventListener('template-bound', function(e) {
