@@ -25,7 +25,8 @@
     "paper-input": "Polymer/paper-input#~0.5.4",
     "polymer-date-picker": "~0.0.11",
     "paper-dialog": "Polymer/paper-dialog#~0.5.4",
-    "core-list": "Polymer/core-list#~0.5.4"
+    "core-list": "Polymer/core-list#~0.5.4",
+    "chart-elements": "~0.1.1"
   },
   "devDependencies": {
     "polymer-test-tools": "Polymer/polymer-test-tools#^0.5.1"
