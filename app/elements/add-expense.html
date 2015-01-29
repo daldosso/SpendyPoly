@@ -26,7 +26,7 @@
         <paper-action-dialog heading="Add expense" id="dialog">
             <p>
                 <paper-input-decorator label="Date" floatingLabel error="input is required!" autoValidate style="width: 200px">
-                    <input is="core-input" required>
+                    <input is="core-input">
                 </paper-input-decorator>
 
                 <!--<input id="trigger" value="{{selectedDate}}"
@@ -39,17 +39,17 @@
                         opened="false">
                 </polymer-date-picker>-->
 
-                <pikaday-element></pikaday-element>
+                <pikaday-element icon="settings"></pikaday-element>
 
                 <paper-input-decorator label="Amount" floatingLabel error="input is required!" autoValidate style="width: 200px">
-                    <input is="core-input" required>
+                    <input is="core-input">
                 </paper-input-decorator>
                 &euro;
 
                 <list-categories></list-categories>
 
                 <paper-input-decorator label="Note" floatingLabel error="input is required!" autoValidate>
-                    <input is="core-input" required>
+                    <input is="core-input">
                 </paper-input-decorator>
             </p>
             <paper-button affirmative autofocus on-click="{{addExpenseConfirm}}">Ok</paper-button>
