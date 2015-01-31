@@ -5,7 +5,11 @@
 
         <core-list data="{{expensesData}}" style="width:800px; height:600px" id="list">
             <template>
-                <div>Spesa: {{model.dataSpesaFormatted}} - {{index}}</div>
+                <div style="padding: 20px">
+                    Date: {{model.dataSpesaFormatted}}<br/>
+                    Amount: {{model.importo}} &euro;<br/>
+                    Category: {{model.categoria}}
+                </div>
             </template>
         </core-list>
     </template>
